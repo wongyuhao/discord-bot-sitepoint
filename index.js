@@ -2,9 +2,10 @@ require('dotenv').config();
 const fs = require('fs')
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const { prefix, token } = require('./config.json');
+const { prefix} = require('./config.json');
 bot.commands = new Discord.Collection();
-bot.login(token);
+TOKEN = process.env.BOT_TOKEN
+bot.login(TOKEN);
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 

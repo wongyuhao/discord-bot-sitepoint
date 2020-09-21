@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'unmute',
+	name: 'um',
 	description: 'Unmutes all members in the origin voice channel',
 	execute(msg, args) {
 		if(!msg.member.voiceChannel){

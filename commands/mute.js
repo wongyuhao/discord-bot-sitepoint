@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'mute',
+	name: 'm',
 	description: 'Mutes all members in the origin voice channel',
 	execute(msg, args) {
 		if(!msg.member.voiceChannel){

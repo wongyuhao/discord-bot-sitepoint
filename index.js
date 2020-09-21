@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const { prefix} = require('./config.json');
 bot.commands = new Discord.Collection();
-TOKEN = process.env.BOT_TOKEN
+const TOKEN = process.env.BOT_TOKEN
 bot.login(TOKEN);
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));

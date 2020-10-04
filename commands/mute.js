@@ -5,11 +5,18 @@ module.exports = {
 		if(!msg.member.voiceChannel){
             msg.channel.send('You must be in a voice channel to use this command!');
             return;
-          };
-          let channel = msg.member.voiceChannel;
-            for (let member of channel.members) {
-                member[1].setMute(true)
-            }
-          msg.channel.send(`Muted all members in ${channel}`)
+    };
+    
+    let channel = msg.member.voiceChannel;
+    let output =`Muted all members in ${channel}`
+    for (let member of channel.members) {
+        if(member.bot){
+          output += `except ${member}`
+        }else{
+          member[1].setMute(true)
+        }
+    }
+
+     msg.channel.send(output)
 	},
 };

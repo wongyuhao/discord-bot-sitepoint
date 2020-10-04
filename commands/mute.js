@@ -11,7 +11,7 @@ module.exports = {
     let output =`Muted all members in ${channel}`
     for (let member of channel.members) {
         if(member.bot){
-          output += `except ${member}`
+          output += ` except ${member}`
         }else{
           member[1].setMute(true)
         }
